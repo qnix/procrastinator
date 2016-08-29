@@ -4,6 +4,6 @@ import org.scalatest._
 
 class HelloScalaSpec extends FlatSpec with Matchers {
   "HelloScala" should "have a test!" in {
-    "no test" should equal ("no test")
+    Func.factorial(5) shouldEqual(120)
   }
 }
