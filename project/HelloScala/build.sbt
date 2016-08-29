@@ -30,8 +30,6 @@ libraryDependencies += "com.esotericsoftware.kryo" % "kryo" % "2.24.0"
 
 libraryDependencies ++= Seq(
   Scalaz,
-  // "paxata" %% "grammar" % "0.9.24",
-  // "paxata" %% "grammar-lang" % "0.1.60",
   // "org.apache.spark" %% "spark-core" % "1.6.0",
   // "org.apache.spark" %% "spark-mllib" % "1.6.0",
   Netlib

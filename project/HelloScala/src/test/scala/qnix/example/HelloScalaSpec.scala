@@ -7,7 +7,7 @@ import org.scalatest._
 @RunWith(classOf[JUnitRunner])
 class HelloScalaSpec extends FlatSpec with Matchers {
   "HelloScala" should "have a test!" in {
-    "no test" should equal ("no test")
+    Func.factorial(5) shouldEqual(120)
   }
   "Test One" should "be run first" in {
     1 should equal (1)
