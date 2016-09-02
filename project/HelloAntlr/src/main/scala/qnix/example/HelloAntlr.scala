@@ -1,5 +1,6 @@
 package qnix.example
 
+import org.antlr.v4.runtime.tree.ParseTreeWalker
 import org.antlr.v4.runtime.{ANTLRInputStream, CommonTokenStream}
 import org.antlr.v4.runtime.tree.ParseTree
 
@@ -25,6 +26,12 @@ object HelloAntlr {
 
     val tree: ParseTree = parser.init() // begin parsing at init rule
 
-    println(tree.toStringTree(parser))
+    // println(tree.toStringTree(parser))
+
+    // Create a generic parse tree walker that can trigger callbacks
+    val walker: ParseTreeWalker = new ParseTreeWalker
+    // Walk the tree created during the parse, trigger callbacks
+    walker.walk(new ShortToUnicodeString(), tree)
+    println()
   }
 }
